@@ -1,0 +1,308 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+}
+
+header {
+  background-color: #0a054f;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+  color: aliceblue;
+}
+
+.hamburger {
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar {
+  background-color: #0a054f;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar > ul > li {
+  flex: 1;
+}
+
+.navbar a {
+  display: block;
+  padding: 14px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #0a054f;
+  color: rgb(255, 246, 240);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  background-color: white;
+}
+
+.submenu li {
+  width: 100%;
+}
+
+.submenu a {
+  text-align: left;
+  padding: 10px;
+  background-color: aliceblue;
+  color: black;
+}
+
+.submenu a:hover {
+  background-color: f;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+  }
+
+  .navbar.open {
+    display: flex;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar li {
+    width: 100%;
+  }
+
+  .submenu {
+    position: relative;
+    background-color: #0a054f;
+    transform: translateY(0);
+    opacity: 1;
+    display: none;
+  }
+
+  .menu-item.show .submenu {
+    display: block;
+    background-color: red;
+  }
+
+  .menu-item:hover .submenu {
+    display: none; /* Prevent hover effect on mobile */
+  }
+}
+/* Hero/Banner Image Styling */
+.hero-image {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 400px;
+  object-fit: cover; /* keeps aspect ratio and fills nicely */
+
+}
+.logo {
+  font-size: 26px;
+  margin: 0;
+  color: white;
+}
+/* ===== Login Section Styling ===== */
+.login-section {
+  background-color: #f3f4f6;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #0a054f;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input[type="email"],
+form input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form button[type="submit"] {
+  margin-top: 20px;
+  background-color: #0a054f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #1a0c7a;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #0a054f;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+/* ===== Login Section Styling ===== */
+.login-section {
+  background-color: #f3f4f6;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #0a054f;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input[type="email"],
+form input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form button[type="submit"] {
+  margin-top: 20px;
+  background-color: #0a054f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #1a0c7a;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #0a054f;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+
+
