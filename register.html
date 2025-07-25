@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Register | Health Connect</title>
+  <link rel="stylesheet" href="health.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required />
+
+      <label for="username">Username</label>
+      <input type="text" id="username" required />
+
+      <button type="submit">Register</button>
+    </form>
+    <p><a href="health.html">Back to Home</a></p>
+  </div>
+
+  <!-- Firebase Scripts -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script> -->
+
+  <script>
+    // 🔁 REPLACE WITH YOUR FIREBASE CONFIG
+    // const firebaseConfig = {
+    //   apiKey: "YOUR_API_KEY",
+    //   authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    //   projectId: "YOUR_PROJECT_ID",
+    //   storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    //   messagingSenderId: "XXXXXXX",
+    //   appId: "YOUR_APP_ID"
+    // };
+
+    // // Initialize Firebase
+    // const app = firebase.initializeApp(firebaseConfig);
+    // const auth = firebase.auth();
+    // const db = firebase.firestore();
+
+    // Handle Registration
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("registerForm");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const successMsg = document.getElementById("successMsg");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // prevent default form submission
+
+      if (!email.value || !password.value) {
+        alert("Please fill in all required fields.");
+        return;
+      }
+
+      // Simple validation passed
+      successMsg.style.display = "block";
+
+      // Optionally clear form
+      form.reset();
+
+      // Optionally hide success after 3 seconds
+      setTimeout(() => {
+        successMsg.style.display = "none";
+      }, 3000);
+    });
+  });
+</script>
+
+  </script>
+</body>
+</html>
